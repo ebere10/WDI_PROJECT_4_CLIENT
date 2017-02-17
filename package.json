@@ -83,11 +83,10 @@
     "htmlhint-stylish": "^1.0.3",
     "jshint": "^2.9.4",
     "jshint-stylish": "^2.2.1",
-    "main-bower-files": "^2.13.1"
-  },
- "engines": {
-   "node": "6.4.0"
- },
+    "main-bower-files": "^2.13.1",
     "require-dir": "^0.3.1"
+  },
+  "engines": {
+    "node": "6.4.0"
   }
 }
