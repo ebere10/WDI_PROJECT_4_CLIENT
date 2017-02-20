@@ -2,5 +2,6 @@
 angular
 .module('mindPops', [
   'ui.router',
-  'angular-jwt'
+  'angular-jwt',
+  'ngResource'
 ]);

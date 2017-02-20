@@ -7,6 +7,7 @@
     <!-- endinject -->
     <!-- inject:css -->
     <!-- endinject -->
+    <base href="/">
   </head>
   <body ng-controller="MainCtrl as main">
     <header>
@@ -26,16 +27,16 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li ng-hide="main.user">
+              <li ng-if="!main.user">
                 <a ui-sref="register">Register</a>
               </li>
-              <li ng-hide="main.user">
+              <li ng-if="!main.user">
                 <a ui-sref="login">Login</a>
               </li>
-              <li ng-show="main.user">
+              <li ng-if="main.user">
                 <a ui-sref="usersIndex">Users</a>
               </li>
-              <li ng-show="main.user">
+              <li ng-if="main.user">
                 <a ng-click="main.logout()">Logout</a>
               </li>
             </ul>
