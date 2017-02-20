@@ -1,6 +1,6 @@
 //use http provider and auth interceptor to affect way http works
 angular
-.module('angularAuthentication')
+.module('mindPops')
 .config(Interceptor);
 
 Interceptor.$inject = ['$httpProvider'];

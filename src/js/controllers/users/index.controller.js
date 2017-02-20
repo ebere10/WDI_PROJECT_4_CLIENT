@@ -1,5 +1,5 @@
 angular
-  .module('angularAuthentication')
+  .module('mindPops')
   .controller('UsersIndexCtrl', UsersIndexCtrl);
 
 UsersIndexCtrl.$inject = ['User'];
