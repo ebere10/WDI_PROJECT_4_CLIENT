@@ -13,7 +13,7 @@ function LoginCtrl(User, CurrentUserService, $state) {
       .then(data => {
         const user = data.user || null;
         CurrentUserService.saveUser(user, data.token);
-        $state.go('home');
+        $state.go('postsIndex');
       }, err => {
         console.log(err);
       });

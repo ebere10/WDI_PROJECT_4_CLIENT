@@ -1,2 +1,17 @@
-<!--  -->
 <h1>Posts Index</h1>
+
+<section class="posts">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-xs-4" ui-sref="postShow({id: post._id})" ng-repeat="post in postsIndex.posts">
+        <!-- <div class="CompanyBanding">
+          <div class="companyLogo" style="background-image: url('{{company.image}}')" alt="company image">
+          </div>
+          <div class="company-info">
+          {{company.name}}
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>

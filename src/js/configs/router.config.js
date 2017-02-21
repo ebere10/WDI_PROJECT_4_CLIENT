@@ -28,14 +28,26 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider) {
     templateUrl: '/js/views/posts/index.html',
     controller: 'PostsIndexCtrl',
     controllerAs: 'postsIndex'
-  });
+  })
+  .state('postsShow', {
+    url: '/posts/:id',
+    templateUrl: '/js/views/posts/show.html',
+    controller: 'PostsShowCtrl',
+    controllerAs: 'postsShow'
+  })
+  .state('usersShow', {
+    url: '/users/:id',
+    templateUrl: '/js/views/users/show.html',
+    controller: 'UsersShowCtrl',
+    controllerAs: 'usersShow'
+  })
 
-  // .state('usersIndex', {
-  //   url: '/users',
-  //   templateUrl: '/js/views/users/index.html',
-  //   controller: 'UsersIndexCtrl',
-  //   controllerAs: 'usersIndex'
-  // });
+  .state('usersIndex', {
+    url: '/users',
+    templateUrl: '/js/views/users/index.html',
+    controller: 'UsersIndexCtrl',
+    controllerAs: 'usersIndex'
+  });
 
   $urlRouterProvider.otherwise('/');
 }
