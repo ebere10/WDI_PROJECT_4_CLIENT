@@ -1,14 +1,27 @@
-// angular
-// .module('mindPops')
-// .controller('postsShowCtrl', postsShowCtrl);
-//
-// postsShowCtrl.$inject = ['Post', '$stateParams', '$http', 'API'];
+angular
+.module('mindPops')
+.controller('postsShowCtrl', postsShowCtrl);
 
-// function postsShowCtrl(Post, $stateParams, $http, API) {
-//   const vm = this;
-//
-//   vm.post = Post.get($stateParams);
-//
+postsShowCtrl.$inject = ['Post', '$stateParams', '$http', 'API'];
+
+function postsShowCtrl(Post, $stateParams, $http, API) {
+  const vm = this;
+  //
+  vm.post = Post.get($stateParams);
+  vm.comment = {};
+  vm.addComment    = addComment;
+  
+
+  function addComment() {
+    $http
+    .post(`${API}/posts/${$stateParams.id}/comments`, {comment: vm.comment})
+    .then((response) => {
+      console.log(response.data);
+      vm.post.comments.push(response.data);
+    });
+  }
+}
+
 //   vm.submit = () => {
 //     vm.comment.post_id = $stateParams.id;
 //

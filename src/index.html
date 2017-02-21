@@ -34,9 +34,9 @@
               <a ui-sref="login">Login</a>
             </li>
             <li ng-if="main.user">
-              <a ui-sref="postsIndexCtrl">All thoughts</a>
+              <a ui-sref="postsIndex">All thoughts</a>
             </li>
-            <li ng-show="main.user">
+            <li ng-if="main.user">
               <a ui-sref="usersShow({id: main.user.id})">My Profile</a>
             </li>
             <!-- <li ng-if="main.user">
