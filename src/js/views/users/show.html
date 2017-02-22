@@ -2,14 +2,15 @@
 
 <form ng-submit="usersShow.createPost()" ng-if="usersShow.checkUser()">
   <div>
-    <input type="text" name="random-thought" ng-model="usersShow.post.body" placeholder="What are you thinking?">
+    <input class="form-control" name="random-thought" ng-model="usersShow.post.body" placeholder="What are you thinking?">
   </div>
-  <input type="submit" value="Random">
+  <!-- <input type="submit" value="Random"> -->
+  <button type="submit" class="btn btn-primary btn-block">post</button>
 </form>
 
 
 <div class="row">
   <ul>
-    <li class="col-md-4 col-xs-4" ng-repeat="post in usersShow.user.posts">{{ post.body }}</li>
+    <li class="col-md-4 col-xs-4 thought-bubble" ng-repeat="post in usersShow.user.posts">{{ post.body }}</li>
   </ul>
 </div>
