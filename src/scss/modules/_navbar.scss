@@ -1,19 +1,19 @@
+nav.navbar.navbar-default {
+  background-color: #fafafa;
+  margin: 0;
+  border: 0;
+}
+
 .navbar li a, .navbar .navbar-brand {
-  color: #fff !important;
+  color: black !important;
 }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
-  color: #D81536 !important;
-  background-color: #fff !important;
+  color: #fff !important;
+  // background-color: #fff !important;
 }
 
 .navbar-default .navbar-toggle {
   border-color: transparent;
   color: #fff !important;
-}
-
-nav.navbar.navbar-default {
-  background-color: #D81536;
-  margin: 0;
-  border: 0;
 }
