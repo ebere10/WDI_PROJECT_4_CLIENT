@@ -1,24 +1,28 @@
 angular
 .module('mindPops')
-.controller('postsShowCtrl', postsShowCtrl);
+.controller('PostsShowCtrl', PostsShowCtrl);
 
-postsShowCtrl.$inject = ['Post', '$stateParams', '$http', 'API'];
+PostsShowCtrl.$inject = ['Post', '$stateParams', '$http', 'API', 'Comment'];
 
-function postsShowCtrl(Post, $stateParams, $http, API) {
+function PostsShowCtrl(Post, $stateParams, $http, API, Comment) {
   const vm = this;
-  //
+
   vm.post = Post.get($stateParams);
   vm.comment = {};
   vm.addComment    = addComment;
-  
+
 
   function addComment() {
-    $http
-    .post(`${API}/posts/${$stateParams.id}/comments`, {comment: vm.comment})
-    .then((response) => {
-      console.log(response.data);
-      vm.post.comments.push(response.data);
-    });
+    if (vm.comment && vm.comment.body && vm.comment.body.length){
+      vm.comment.post_id = vm.post.id;
+      Comment
+      .save({comment: vm.comment})
+      .$promise
+      .then(data => {
+        vm.post.comments.push(data);
+        vm.comment = {};
+      });
+    }
   }
 }
 

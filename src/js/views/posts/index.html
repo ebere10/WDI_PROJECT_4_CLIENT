@@ -1,6 +1,11 @@
 <h1>Posts Index</h1>
 
-<section class="posts">
+<ul>
+  <li ui-sref="postsShow({id: post.id})" ng-repeat="post in postsIndex.posts">{{ post.body }}</li>
+</ul>
+
+
+<!-- <section class="posts">
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-xs-4" ui-sref="postShow({id: post._id})" ng-repeat="post in postsIndex.posts">
@@ -11,7 +16,7 @@
           {{company.name}}
           </div>
         </div> -->
-      </div>
+      <!-- </div>
     </div>
   </div>
-</section>
+</section> -->

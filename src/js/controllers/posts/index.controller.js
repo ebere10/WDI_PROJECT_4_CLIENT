@@ -1,13 +1,20 @@
 angular
   .module('mindPops')
-  .controller('postsIndexCtrl', postsIndexCtrl);
+  .controller('PostsIndexCtrl', PostsIndexCtrl);
 
-postsIndexCtrl.$inject = ['Post', 'TokenService', '$state'];
+PostsIndexCtrl.$inject = ['Post', 'TokenService', '$state'];
 
-function postsIndexCtrl(Post, TokenService, $state){
+function PostsIndexCtrl(Post, TokenService, $state){
   const vm = this;
-  // vm.hiya = 'yh mate';
   vm.posts = Post.query();
+
+  Post
+  .query()
+  .$promise
+  .then((data) => {
+    vm.post = data;
+  });
+
   if (!TokenService.getToken()){
     $state.go('login');
   }

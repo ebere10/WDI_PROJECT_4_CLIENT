@@ -8,7 +8,7 @@ function postsNewCtrl(Post){
 
   vm.create = () => {
     Post
-      .save(vm.post)
-      .$promise;
+      .save(vm.post);
+      // .$promise;
   };
 }

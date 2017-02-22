@@ -1,8 +1,12 @@
 <h1>User Profile show page</h1>
 
-<form ng-submit="i.login()">
+<form ng-submit="usersShow.createPost()" ng-if="usersShow.checkUser()">
   <div>
-    <input type="text" name="random-thought" ng-model="login.user.password" placeholder="What are you thinking?">
+    <input type="text" name="random-thought" ng-model="usersShow.post.body" placeholder="What are you thinking?">
   </div>
   <input type="submit" value="Random">
 </form>
+
+<ul>
+  <li ng-repeat="post in usersShow.user.posts">{{ post.body }}</li>
+</ul>
