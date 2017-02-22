@@ -76,5 +76,25 @@ h1 {
 }
 
 nav.navbar.navbar-default {
-  background-color: red;
+  background-color: #f4511e;
 }
+
+li {
+  list-style: none;
+}
+
+//
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+//
