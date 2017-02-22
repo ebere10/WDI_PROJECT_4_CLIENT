@@ -1,4 +1,4 @@
-<h1>User Profile show page</h1>
+<h1>My Mind-Pops</h1>
 
 <form ng-submit="usersShow.createPost()" ng-if="usersShow.checkUser()">
   <div>
@@ -7,6 +7,9 @@
   <input type="submit" value="Random">
 </form>
 
-<ul>
-  <li ng-repeat="post in usersShow.user.posts">{{ post.body }}</li>
-</ul>
+
+<div class="row">
+  <ul>
+    <li class="col-md-4 col-xs-4" ng-repeat="post in usersShow.user.posts">{{ post.body }}</li>
+  </ul>
+</div>
