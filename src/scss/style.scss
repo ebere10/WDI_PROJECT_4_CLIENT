@@ -1,4 +1,8 @@
 // Import all of your scss files here
+@import "modules/navbar";
+@import "modules/footer";
+
+
 body {
   background: #fff;
   // background: linear-gradient(red, yellow); /* Standard syntax */
@@ -79,32 +83,10 @@ h1 {
   color: #D81536;
 }
 
-nav.navbar.navbar-default {
-  background-color: #D81536;
-  margin: 0;
-  border: 0;
-}
-
 li {
   list-style: none;
 }
 
 //
-.navbar li a, .navbar .navbar-brand {
-    color: #fff !important;
-}
 
-.navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #D81536 !important;
-    background-color: #fff !important;
-}
-
-.navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #fff !important;
-  }
 //
-
-footer {
-  text-align: center;
-}
