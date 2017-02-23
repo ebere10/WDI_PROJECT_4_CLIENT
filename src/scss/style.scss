@@ -11,11 +11,16 @@ body {
 
 h2 {
   text-align: center;
+  color: #fff;
 }
 
 h1 {
   font-size: 70px;
-  color: #D81536;
+  color: #68C9C7;
+}
+
+.home-heading {
+  color: #fff
 }
 
 li {
@@ -23,12 +28,22 @@ li {
 }
 
 .home {
-  background-color: #fe9abc;
+  background-color: #68C9C7;
+  // background-color: #fe9abc;
   width: 1278px;
   height: 560px;
   text-align: center;
+  padding-top: 40px;
 }
 
 main.container {
   height: 600px;
+  // text-align: center;
 }
+ section.home.ng-scope {
+   text-align: center;
+ }
+ main.container.ng-scope {
+  //  height: 600px;
+   text-align: center;
+ }

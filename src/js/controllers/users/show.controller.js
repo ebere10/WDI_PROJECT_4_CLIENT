@@ -8,7 +8,7 @@ function UsersShowCtrl(User, Post, CurrentUserService, $stateParams){
   vm.createPost = createPost;
   vm.checkUser = checkUser;
   //delete
-  // vm.post = {};
+  // vm.deletePost = deletePost;
 
   User
   .get({id: $stateParams.id})
@@ -38,6 +38,13 @@ function UsersShowCtrl(User, Post, CurrentUserService, $stateParams){
   //   });
   // }
 
+
+  // function deletePost() {
+  //   vm.delete(`${API}/post/${ post.id }`)
+  //   .then(data => {
+  //     console.log(data);
+  //   });
+  // }
 
   function checkUser() {
     if (CurrentUserService.user.id === parseInt($stateParams.id)) {
