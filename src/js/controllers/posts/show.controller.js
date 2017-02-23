@@ -3,7 +3,6 @@ angular
 .controller('PostsShowCtrl', PostsShowCtrl);
 
 PostsShowCtrl.$inject = ['Post', '$stateParams', '$http', 'API', 'Comment'];
-
 function PostsShowCtrl(Post, $stateParams, $http, API, Comment) {
   const vm = this;
 

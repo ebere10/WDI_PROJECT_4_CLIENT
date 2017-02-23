@@ -1,50 +1,35 @@
 angular
-.module('mindPops')
-.controller('UsersShowCtrl', UsersShowCtrl);
+  .module('mindPops')
+  .controller('UsersShowCtrl', UsersShowCtrl);
 
 UsersShowCtrl.$inject = ['User', 'Post', 'CurrentUserService', '$stateParams'];
 function UsersShowCtrl(User, Post, CurrentUserService, $stateParams){
   const vm = this;
-  vm.createPost = createPost;
-  vm.checkUser = checkUser;
-  //delete
-  // vm.deletePost = deletePost;
+
+  vm.createPost  = createPost;
+  vm.checkUser   = checkUser;
+  vm.deletePost  = deletePost;
 
   User
-  .get({id: $stateParams.id})
-  .$promise
-  .then((data) => {
-    vm.user = data;
-  });
+    .get({ id: $stateParams.id })
+    .$promise
+    .then(data => {
+      vm.user = data;
+    });
 
   function createPost() {
     vm.post.user_id = CurrentUserService.user.id;
+
     Post
-    .save(vm.post)
-    .$promise
-    .then((data) => {
-      console.log(data);
-    });
+      .save(vm.post)
+      .$promise
+      .then(data => {
+        vm.user.posts.push(data);
+      });
   }
 
-  // function createPost() {
-  //   vm.post.user_id = CurrentUserService.user.id;
-  //   Post
-  //   .save(vm.post)
-  //   .$promise
-  //   .then((data) => {
-  //     vm.posts.push(data);
-  //     vm.post = {};
-  //   });
-  // }
-
-
-  // function deletePost() {
-  //   vm.delete(`${API}/post/${ post.id }`)
-  //   .then(data => {
-  //     console.log(data);
-  //   });
-  // }
+  function deletePost() {
+  }
 
   function checkUser() {
     if (CurrentUserService.user.id === parseInt($stateParams.id)) {
@@ -53,5 +38,4 @@ function UsersShowCtrl(User, Post, CurrentUserService, $stateParams){
       return false;
     }
   }
-
 }

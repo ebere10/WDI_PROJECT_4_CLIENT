@@ -3,7 +3,6 @@ angular
   .controller('PostsIndexCtrl', PostsIndexCtrl);
 
 PostsIndexCtrl.$inject = ['Post', 'TokenService', '$state'];
-
 function PostsIndexCtrl(Post, TokenService, $state){
   const vm = this;
   vm.posts = Post.query();
