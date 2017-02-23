@@ -1,12 +1,21 @@
 .home {
+  //easing in the hover colour, may delete it
+  transition: background-color 1.5s ease;
   background-color: #68C9C7;
-  // background-color: #fe9abc;
-  height: 560px;
+  height: 580px;
   text-align: center;
   padding-top: 40px;
   border-radius: 20px;
 }
 
+.home:hover {
+  background-color: #fe9abc;
+}
+
 .home-heading {
-  color: #fff
+  color: #fff;
+}
+
+.home-tag {
+ margin-top: 140px;
 }

@@ -2,8 +2,8 @@ angular
 .module('mindPops')
 .controller('PostsShowCtrl', PostsShowCtrl);
 
-PostsShowCtrl.$inject = ['Post', '$stateParams', '$http', 'API', 'Comment', 'User'];
-function PostsShowCtrl(Post, $stateParams, $http, API, Comment, User) {
+PostsShowCtrl.$inject = ['Post', '$stateParams', '$http', 'API', 'Comment'];
+function PostsShowCtrl(Post, $stateParams, $http, API, Comment) {
   const vm = this;
 
   vm.post = Post.get($stateParams);

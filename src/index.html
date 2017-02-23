@@ -28,6 +28,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a ui-sref="about">ABOUT</a>
+            </li>
             <li ng-if="!main.user">
               <a ui-sref="register">REGISTER</a>
             </li>
@@ -52,7 +55,7 @@
     </nav>
   </header>
   <main class="container" ui-view></main>
-  <footer>
+  <footer ng-if="!main.user">
     <p>Made with &hearts; by Ebere</p>
   </footer>
 </body>

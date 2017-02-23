@@ -3,13 +3,21 @@
 @import "modules/footer";
 @import "thought-bubbles";
 @import "pages/home";
+@import "pages/about";
 @import "pages/register-login";
 @import "buttons";
 
 
+
 body {
   background: #fff;
-  // background: linear-gradient(red, yellow); /* Standard syntax */
+}
+
+h3  {
+  text-align: center;
+  color: #fff;
+  font-family: 'Space Mono', monospace;
+  padding: 0 20px;
 }
 
 h2 {
@@ -20,12 +28,18 @@ h2 {
 
 h1 {
   font-size: 70px;
-  color: #68C9C7;
+  color: pink;
   font-family: 'Baloo', cursive;
 }
 
+
+
 li {
   list-style: none;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 main.container {
@@ -94,5 +108,45 @@ li {
   font-family: 'Space Mono', monospace;
 }
 
+.user-input {
+  border-color:  #E2DE62;
+  background-color: #68C9C7
+}
+
 
 ///TEST AND DELETE////
+
+.floating{
+	animation-name: floating;
+	-webkit-animation-name: floating;
+
+	animation-duration: 2.5s;
+	-webkit-animation-duration: 2.5s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+	0% {
+		transform: translateY(0%);
+	}
+	50% {
+		transform: translateY(8%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@-webkit-keyframes floating {
+	0% {
+		-webkit-transform: translateY(0%);
+	}
+	50% {
+		-webkit-transform: translateY(8%);
+	}
+	100% {
+		-webkit-transform: translateY(0%);
+	}
+}
