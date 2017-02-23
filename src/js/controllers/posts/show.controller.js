@@ -2,14 +2,27 @@ angular
 .module('mindPops')
 .controller('PostsShowCtrl', PostsShowCtrl);
 
-PostsShowCtrl.$inject = ['Post', '$stateParams', '$http', 'API', 'Comment'];
-function PostsShowCtrl(Post, $stateParams, $http, API, Comment) {
+PostsShowCtrl.$inject = ['Post', '$stateParams', '$http', 'API', 'Comment', 'User'];
+function PostsShowCtrl(Post, $stateParams, $http, API, Comment, User) {
   const vm = this;
 
   vm.post = Post.get($stateParams);
   vm.comment = {};
   vm.addComment    = addComment;
+  vm.getPost = getPost;
+  vm.deleteComment = deleteComment;
 
+
+  function getPost() {
+    Post
+      .get({ id: $stateParams.id })
+      .$promise
+      .then(data => {
+        vm.post = data;
+      });
+  }
+
+  getPost();
 
   function addComment() {
     if (vm.comment && vm.comment.body && vm.comment.body.length){
@@ -23,27 +36,22 @@ function PostsShowCtrl(Post, $stateParams, $http, API, Comment) {
       });
     }
   }
-}
 
-//   vm.submit = () => {
-//     vm.comment.post_id = $stateParams.id;
-//
-//     $http
-//       .post(`${API}/comments`, vm.comment)
-//       .then(data => {
-//         vm.post.comments.push(data.data);
-//         vm.comment = '';
-//       });
-//   };
-//
-//   vm.commentDelete = (comment) => {
-//
-//     $http
-//       .delete(`${API}/comments/${ comment.id }`)
-//       .then(data => {
-//         console.log(data);
-//         let index = vm.post.comments.indexOf(data.data.id);
-//         vm.post.comments.splice(index, 1);
-//       });
-//   };
-// }
+  // function deleteComment(comment) {
+  //   Comment
+  //     .delete({ id: user.comment.id })
+  //     .$promise
+  //     .then(() => {
+  //       console.log();
+  //     });
+
+  function deleteComment(comment) {
+    Comment
+    .delete({ id: comment.id })
+    .$promise
+    .then(() => {
+      getPost();
+    });
+  }
+
+}
