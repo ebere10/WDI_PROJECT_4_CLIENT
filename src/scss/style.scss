@@ -15,11 +15,13 @@ body {
 h2 {
   text-align: center;
   color: #fff;
+  font-family: 'Space Mono', monospace;
 }
 
 h1 {
   font-size: 70px;
   color: #68C9C7;
+  font-family: 'Baloo', cursive;
 }
 
 li {
@@ -45,6 +47,7 @@ main.container {
      @if $size != "" {
        font-size: $size;
        opacity: 0.2;
+       font-family: 'Space Mono', monospace;
      }
    }
    &:-moz-placeholder {
@@ -52,6 +55,7 @@ main.container {
      @if $size != "" {
        font-size: $size;
        opacity: 0.2;
+       font-family: 'Space Mono', monospace;
      }
    }
    &::-moz-placeholder {
@@ -59,6 +63,7 @@ main.container {
      @if $size != "" {
        font-size: $size;
        opacity: 0.2;
+       font-family: 'Space Mono', monospace;
      }
    }
    &:-ms-input-placeholder {
@@ -66,6 +71,7 @@ main.container {
      @if $size != "" {
        font-size: $size;
        opacity: 0.2;
+       font-family: 'Space Mono', monospace;
      }
    }
  }
@@ -77,3 +83,16 @@ main.container {
 
 
 button:focus {outline:0 !important;}
+
+
+//test
+p {
+  font-family: 'Space Mono', monospace;
+}
+
+li {
+  font-family: 'Space Mono', monospace;
+}
+
+
+///TEST AND DELETE////
