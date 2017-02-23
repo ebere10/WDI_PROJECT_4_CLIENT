@@ -1,33 +1,31 @@
 <h2 class="thought-bubble">{{postsShow.post.body}}</h2>
 
+<div class="container">
+  <h2>Comment</h2>
+  <form ng-submit="postsShow.addComment()">
+    <div class="form-group">
+      <input class="form-control" type="text" placeholder="What's on your mind?" ng-model="postsShow.comment.body">
+    </div>
+    <button type="submit" class="btn">post</button>
+  </form>
+</div>
+
 <section class="postsShow">
 
   <div ng-show="postsShow.post.comments.length">
     <h2>Comments:</h2>
     <div class="row">
-    <ul>
-      <li class="col-md-4 col-xs-4 thought-bubble" ng-repeat="comment in postsShow.post.comments">
-        <p>{{comment.body}}</p>
-        <button ng-click="postsShow.deleteComment(comment)">Delete</button>
-      </li>
-    </ul>
-  </div>
+      <ul>
+        <li class="col-md-4 col-xs-4 thought-bubble" ng-repeat="comment in postsShow.post.comments">
+          <p>{{comment.body}}</p>
+          <!-- <button ng-click="postsShow.deleteComment(comment)">Delete</button> -->
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div ng-hide="postsShow.post.comments.length">
     <h2>No comments on this post yet</h2>
   </div>
 
-  <div class="container">
-    <h2>Comment</h2>
-    <form ng-submit="postsShow.addComment()">
-      <div class="form-group">
-        <input class="form-control" type="text" placeholder="What's on your mind?" ng-model="postsShow.comment.body">
-      </div>
-      <button type="submit" class="btn btn-primary btn-block">post</button>
-    </form>
-
-
-
-</div>
 </section>

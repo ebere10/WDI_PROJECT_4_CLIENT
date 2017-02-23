@@ -2,6 +2,7 @@ button {
   background-color: #fe9abc;
   border: none;
   border-radius: 30px;
+  font-family: 'Space Mono', monospace;
 }
 
 .btn {
@@ -10,4 +11,14 @@ button {
   font-size: 50px;
   color: white;
   font-family: 'Space Mono', monospace;
+}
+
+.btn:hover {
+    background-color: #E2DE62;
+    color: white;
+}
+
+button:hover {
+    background-color: #E2DE62;
+    color: white;
 }
