@@ -10,7 +10,7 @@ function PostsShowCtrl(Post, $stateParams, $http, API, Comment, User) {
   vm.comment = {};
   vm.addComment    = addComment;
   vm.getPost = getPost;
-  vm.deleteComment = deleteComment;
+  // vm.deleteComment = deleteComment;
 
 
   function getPost() {
@@ -37,21 +37,14 @@ function PostsShowCtrl(Post, $stateParams, $http, API, Comment, User) {
     }
   }
 
+
   // function deleteComment(comment) {
   //   Comment
-  //     .delete({ id: user.comment.id })
-  //     .$promise
-  //     .then(() => {
-  //       console.log();
-  //     });
-
-  function deleteComment(comment) {
-    Comment
-    .delete({ id: comment.id })
-    .$promise
-    .then(() => {
-      getPost();
-    });
-  }
+  //   .delete({ id: comment.id })
+  //   .$promise
+  //   .then(() => {
+  //     getPost();
+  //   });
+  // }
 
 }

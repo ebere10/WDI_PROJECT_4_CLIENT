@@ -4,6 +4,7 @@
 @import "thought-bubbles";
 @import "pages/home";
 @import "pages/register-login";
+@import "buttons";
 
 
 body {
@@ -73,3 +74,6 @@ main.container {
  [placeholder] {
    @include placeholder(white, 60px);
  }
+
+
+button:focus {outline:0 !important;}

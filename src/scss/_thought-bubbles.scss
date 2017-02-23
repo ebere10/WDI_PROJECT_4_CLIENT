@@ -80,13 +80,6 @@
   width: 450px;
 
 
-  /* css3 */
-  /*
-  NOTES:
-  -webkit-border-radius:240px 140px; // produces oval in safari 4 and chrome 4
-  -webkit-border-radius:240px / 140px; // produces oval in chrome 4 (again!) but not supported in safari 4
-  Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
-  */
   -webkit-border-top-left-radius:240px 140px;
   -webkit-border-top-right-radius:240px 140px;
   -webkit-border-bottom-right-radius:240px 140px;
