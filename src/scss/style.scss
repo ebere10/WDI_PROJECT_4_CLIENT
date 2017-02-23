@@ -2,6 +2,7 @@
 @import "modules/navbar";
 @import "modules/footer";
 @import "thought-bubbles";
+@import "pages/home";
 
 
 body {
@@ -19,21 +20,8 @@ h1 {
   color: #68C9C7;
 }
 
-.home-heading {
-  color: #fff
-}
-
 li {
   list-style: none;
-}
-
-.home {
-  background-color: #68C9C7;
-  // background-color: #fe9abc;
-  width: 1278px;
-  height: 560px;
-  text-align: center;
-  padding-top: 40px;
 }
 
 main.container {

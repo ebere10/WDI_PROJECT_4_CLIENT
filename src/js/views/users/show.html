@@ -11,6 +11,8 @@
 
 <div class="row">
   <ul>
-    <li class="col-md-4 col-xs-4 thought-bubble" ng-repeat="post in usersShow.user.posts">{{ post.body }}</li>
+    <li class="col-md-4 col-xs-4 thought-bubble" ng-repeat="post in usersShow.user.posts">{{ post.body }}
+      <button ng-click="usersShow.deletePost(post)">Delete</button>
+    </li>
   </ul>
 </div>

@@ -8,7 +8,7 @@
     <ul>
       <li class="col-md-4 col-xs-4 thought-bubble" ng-repeat="comment in postsShow.post.comments">
         <p>{{comment.body}}</p>
-        <button type="button" name="button">delete</button>
+        <button ng-click="postsShow.deleteComment(comment)">Delete</button>
       </li>
     </ul>
   </div>

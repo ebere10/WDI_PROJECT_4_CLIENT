@@ -8,14 +8,19 @@ function UsersShowCtrl(User, Post, CurrentUserService, $stateParams){
 
   vm.createPost  = createPost;
   vm.checkUser   = checkUser;
+  vm.getUser     = getUser;
   vm.deletePost  = deletePost;
 
-  User
-    .get({ id: $stateParams.id })
-    .$promise
-    .then(data => {
-      vm.user = data;
-    });
+  function getUser() {
+    User
+      .get({ id: $stateParams.id })
+      .$promise
+      .then(data => {
+        vm.user = data;
+      });
+  }
+
+  getUser();
 
   function createPost() {
     vm.post.user_id = CurrentUserService.user.id;
@@ -28,7 +33,13 @@ function UsersShowCtrl(User, Post, CurrentUserService, $stateParams){
       });
   }
 
-  function deletePost() {
+  function deletePost(post) {
+    Post
+      .delete({ id: post.id })
+      .$promise
+      .then(() => {
+        getUser();
+      });
   }
 
   function checkUser() {
