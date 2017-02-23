@@ -36,3 +36,40 @@ main.container {
   //  height: 600px;
    text-align: center;
  }
+
+
+ @mixin placeholder($color, $size:"") {
+   &::-webkit-input-placeholder {
+     color: $color;
+     @if $size != "" {
+       font-size: $size;
+       opacity: 0.2;
+     }
+   }
+   &:-moz-placeholder {
+     color: $color;
+     @if $size != "" {
+       font-size: $size;
+       opacity: 0.2;
+     }
+   }
+   &::-moz-placeholder {
+     color: $color;
+     @if $size != "" {
+       font-size: $size;
+       opacity: 0.2;
+     }
+   }
+   &:-ms-input-placeholder {
+     color: $color;
+     @if $size != "" {
+       font-size: $size;
+       opacity: 0.2;
+     }
+   }
+ }
+
+ // Use placeholder mixin (the size parameter is optional)
+ [placeholder] {
+   @include placeholder(white, 60px);
+ }
