@@ -9,4 +9,7 @@ Mind pops is an app that allows users to store their most random thoughts, share
 
 **Going forward**
 
+There are still changes I would like to make to the CSS. I wasn't able to incorporate all that I had in mind.
+I had planned to have more animations.
+
 I would ...
