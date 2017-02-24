@@ -30,6 +30,8 @@ function UsersShowCtrl(User, Post, CurrentUserService, $stateParams){
       .$promise
       .then(data => {
         vm.user.posts.push(data);
+        //
+        vm.post = {};
       });
   }
 
