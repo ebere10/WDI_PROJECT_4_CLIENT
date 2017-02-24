@@ -6,6 +6,7 @@
 @import "pages/about";
 @import "pages/register-login";
 @import "buttons";
+@import "variables";
 
 
 
@@ -16,20 +17,20 @@ body {
 h3  {
   text-align: center;
   color: #fff;
-  font-family: 'Space Mono', monospace;
+  font-family: $body-font;
   padding: 0 20px;
 }
 
 h2 {
   text-align: center;
   color: #fff;
-  font-family: 'Space Mono', monospace;
+  font-family: $body-font
 }
 
 h1 {
   font-size: 70px;
   color: pink;
-  font-family: 'Baloo', cursive;
+  font-family: $heading-font;
 }
 
 
@@ -61,7 +62,7 @@ main.container {
      @if $size != "" {
        font-size: $size;
        opacity: 0.2;
-       font-family: 'Space Mono', monospace;
+       font-family: $body-font
      }
    }
    &:-moz-placeholder {
@@ -69,7 +70,7 @@ main.container {
      @if $size != "" {
        font-size: $size;
        opacity: 0.2;
-       font-family: 'Space Mono', monospace;
+       font-family: $body-font
      }
    }
    &::-moz-placeholder {
@@ -77,7 +78,7 @@ main.container {
      @if $size != "" {
        font-size: $size;
        opacity: 0.2;
-       font-family: 'Space Mono', monospace;
+       font-family: $body-font
      }
    }
    &:-ms-input-placeholder {
@@ -85,7 +86,7 @@ main.container {
      @if $size != "" {
        font-size: $size;
        opacity: 0.2;
-       font-family: 'Space Mono', monospace;
+       font-family: $body-font
      }
    }
  }
@@ -101,11 +102,11 @@ button:focus {outline:0 !important;}
 
 //test
 p {
-  font-family: 'Space Mono', monospace;
+  font-family: $body-font
 }
 
 li {
-  font-family: 'Space Mono', monospace;
+  font-family: $body-font
 }
 
 .user-input {
