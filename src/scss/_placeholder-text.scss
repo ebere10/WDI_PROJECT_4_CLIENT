@@ -1,0 +1,39 @@
+// @mixin placeholder($color, $size:"") {
+//   &::-webkit-input-placeholder {
+//     color: $color;
+//     @if $size != "" {
+//       font-size: $size;
+//       opacity: 0.2;
+//       font-family: $body-font
+//     }
+//   }
+//   &:-moz-placeholder {
+//     color: $color;
+//     @if $size != "" {
+//       font-size: $size;
+//       opacity: 0.2;
+//       font-family: $body-font
+//     }
+//   }
+//   &::-moz-placeholder {
+//     color: $color;
+//     @if $size != "" {
+//       font-size: $size;
+//       opacity: 0.2;
+//       font-family: $body-font
+//     }
+//   }
+//   &:-ms-input-placeholder {
+//     color: $color;
+//     @if $size != "" {
+//       font-size: $size;
+//       opacity: 0.2;
+//       font-family: $body-font
+//     }
+//   }
+// }
+//
+// // Use placeholder mixin (the size parameter is optional)
+// [placeholder] {
+//   @include placeholder(white, 60px);
+// }
