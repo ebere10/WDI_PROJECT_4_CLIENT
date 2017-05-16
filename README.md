@@ -1,4 +1,4 @@
-##Mind-Pops
+## Mind-Pops
 
 A Rails and Angular app built for my WDI (Web Development Immersive) final project at General assembly.
 
